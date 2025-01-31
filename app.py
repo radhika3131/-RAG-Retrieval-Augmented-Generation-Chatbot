@@ -5,6 +5,8 @@ import pickle
 from datetime import datetime
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
@@ -23,12 +25,14 @@ generator = pipeline("text2text-generation", model="google/flan-t5-large")
 
 
 
-#  MySQL Connection
+# Load environment variables
+load_dotenv()
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Radhika@31",
-    database="chatbot_db"
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
 )
 cursor = db.cursor()
 
