@@ -1,0 +1,8 @@
+flask
+faiss-cpu
+sentence-transformers
+mysql-connector-python
+transformers
+torch
+langchain
+python-dotenv
