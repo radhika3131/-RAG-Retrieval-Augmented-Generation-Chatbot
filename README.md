@@ -139,3 +139,26 @@ http://127.0.0.1:5000/history
 ]
 ```
 If you receive this response, the chat history is stored correctly in MySQL!
+
+##  **Conclusion**
+This project successfully implements a **Retrieval-Augmented Generation (RAG) Chatbot** using:
+- **FAISS** for fast vector-based retrieval.
+- **Flan-T5** for text generation.
+- **Flask API** for serving responses.
+- **MySQL** for chat history storage.
+
+### ** Features Implemented**
+✅ **Text Processing & Chunking**  
+✅ **Embeddings & Vector Storage (FAISS)**  
+✅ **Retrieval-Augmented Generation (RAG) Pipeline**  
+✅ **Flask API with `/chat` & `/history` Endpoints**  
+✅ **MySQL Database Integration**  
+✅ **API Testing with Postman**  
+
+This chatbot can retrieve relevant information from a custom dataset and generate context-aware responses.
+## 🚀 **Future Improvements**
+While the core functionalities have been implemented, future enhancements could include:
+- **Dockerization** 🐳 → For an isolated, reproducible environment.
+- **Cloud Deployment** ☁️ → Deploying the chatbot on **Render/AWS/GCP**.
+- **Frontend UI** 💻 → Integrating the chatbot with a user-friendly interface using **React or Streamlit**.
+- **Fine-Tuning LLMs** 🧠 → Improving the model with domain-specific training.
